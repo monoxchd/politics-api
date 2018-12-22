@@ -1,5 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
+    # Active Record relations
+    has_many :bills
     
     # Password validations
     validates_length_of         :password, maximum: 32, minimum: 6, allow_nil: true, allow_blank: false
